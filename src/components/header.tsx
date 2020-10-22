@@ -19,10 +19,7 @@ const Header: React.FC<HeaderProps> = ({ backgroundImage }) => {
               <a>Home</a>
             </Link>
             <Link href="/portfolio">
-              <a>Portfólio</a>
-            </Link>
-            <Link href="/contact">
-              <a>Contato</a>
+              <a>Portfolio</a>
             </Link>
           </Navigation>
 
