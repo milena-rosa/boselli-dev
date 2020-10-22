@@ -1,16 +1,16 @@
 import React from 'react'
-import Header from '../components/header'
+import Head from 'next/head'
 
-import { Container, Content } from '../styles/home'
-import background from '../assets/desktop.png'
-import profile from '../assets/profile.jpg'
-import { Head } from 'next/document'
+import Header from '../components/header'
+import { Container, Content } from '../styles/pages/home'
+import background from '../../public/desktop.png'
+import profile from '../../public/profile.jpg'
 
 const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Portfolio | Boselli.dev</title>
+        <title>Boselli.dev</title>
       </Head>
       <Container>
         <Header backgroundImage={background} />

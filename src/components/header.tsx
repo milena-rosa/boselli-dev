@@ -2,11 +2,16 @@ import React from 'react'
 import Link from 'next/link'
 
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
-import { Container, Navigation, SocialMedia, Wrapper } from '../styles/header'
-import logo from '../assets/logo.png'
+import {
+  Container,
+  Navigation,
+  SocialMedia,
+  Wrapper
+} from '../styles/pages/header'
+import logo from '../../public/logo.png'
 
 interface HeaderProps {
-  backgroundImage: string
+  backgroundImage?: string
 }
 
 const Header: React.FC<HeaderProps> = ({ backgroundImage }) => {

@@ -9,7 +9,7 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-import favicon from '../assets/favicon.ico'
+import favicon from '../../public/favicon.ico'
 
 export default class MyDocument extends Document {
   static async getInitialProps(

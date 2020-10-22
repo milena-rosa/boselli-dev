@@ -13,7 +13,7 @@ export const Content = styled.div`
 
   img {
     height: auto;
-    width: 50%;
+    min-width: 50%;
   }
 
   p {

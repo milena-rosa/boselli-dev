@@ -14,6 +14,7 @@ export const RepositoriesWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  margin: 0 10%;
 `
 
 export const RepositoryCard = styled.div`

@@ -12,10 +12,10 @@ import {
   RepositoryCard,
   CardHeader,
   Title
-} from '../styles/portfolio'
+} from '../styles/pages/portfolio'
 import Icon from '../components/icon'
 
-import background from '../assets/desktop.png'
+import background from '../../public/desktop.png'
 
 interface Repository {
   id: number
@@ -30,12 +30,16 @@ interface PortfolioProps {
 }
 
 const Portfolio: React.FC<PortfolioProps> = ({ repositories }) => {
+  if (!repositories) {
+    return <h3>Loading</h3>
+  }
+
   return (
     <>
       <Head>
         <title>Portfolio | Boselli.dev</title>
       </Head>
-      <Header backgroundImage={background} />
+      <Header />
       <Container>
         <RepositoriesWrapper>
           {repositories.map(repository => (
