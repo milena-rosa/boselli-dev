@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import { FiGithub } from 'react-icons/fi'
 import { GetServerSideProps } from 'next'
@@ -10,7 +10,8 @@ import {
   Container,
   RepositoriesWrapper,
   RepositoryCard,
-  CardHeader
+  CardHeader,
+  Title
 } from '../styles/portfolio'
 import Icon from '../components/icon'
 
@@ -32,7 +33,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ repositories }) => {
   return (
     <>
       <Head>
-        <title>Portfólio | Boselli.dev</title>
+        <title>Portfolio | Boselli.dev</title>
       </Head>
       <Header backgroundImage={background} />
       <Container>
@@ -40,15 +41,15 @@ const Portfolio: React.FC<PortfolioProps> = ({ repositories }) => {
           {repositories.map(repository => (
             <RepositoryCard key={repository.id}>
               <CardHeader>
-                <div>
+                <Title>
                   <strong>{repository.name}</strong>
 
                   <Link href={repository.html_url}>
                     <a target="_blank">
-                      <FiGithub size={20} color="#FDCD49" />
+                      <FiGithub size={24} color="#FDCD49" />
                     </a>
                   </Link>
-                </div>
+                </Title>
                 {repository.language && <Icon language={repository.language} />}
               </CardHeader>
               <p>{repository.description}</p>

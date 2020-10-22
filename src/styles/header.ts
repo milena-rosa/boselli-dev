@@ -12,7 +12,7 @@ export const Wrapper = styled.div<HeaderProps>`
   display: flex;
   justify-content: stretch;
   height: 400px;
-  width: 100vw;
+  width: 99vw;
   z-index: 10000;
 `
 

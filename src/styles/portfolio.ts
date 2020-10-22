@@ -22,7 +22,7 @@ export const RepositoryCard = styled.div`
   color: ${props => props.theme.colors.secondary};
   display: flex;
   flex-direction: column;
-  opacity: 0.9;
+  opacity: 0.98;
   /* justify-content: space-between; */
   /* min-height: 240px; */
   padding: 24px;
@@ -35,21 +35,14 @@ export const CardHeader = styled.div`
   justify-content: space-between;
   margin-bottom: 16px;
 
-  > div {
-    align-items: center;
-    display: flex;
-    /* margin-bottom: 16px; */
-    justify-content: center;
+  svg {
+    margin-left: 8px;
+    color: ${props => props.theme.colors.primary};
+    font-weight: 400;
+    text-decoration: none;
 
-    svg {
-      margin-left: 8px;
-      color: ${props => props.theme.colors.primary};
-      font-weight: 400;
-      text-decoration: none;
-
-      &:hover {
-        color: ${props => darken(0.2, props.theme.colors.primary)};
-      }
+    &:hover {
+      color: ${props => darken(0.2, props.theme.colors.primary)};
     }
   }
 
@@ -57,4 +50,9 @@ export const CardHeader = styled.div`
     font-size: 20px;
     /* margin-bottom: 8px; */
   }
+`
+
+export const Title = styled.div`
+  align-items: center;
+  display: flex;
 `
