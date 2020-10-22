@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from '../components/header'
 
-import { Container } from '../styles/home'
+import { Container } from '../styles/contact'
 
-const Home: React.FC = () => {
+const Contact: React.FC = () => {
   return (
     <Container>
       <Header />
@@ -11,4 +11,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default Contact
