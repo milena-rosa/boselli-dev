@@ -14,6 +14,8 @@ import {
 } from '../styles/portfolio'
 import Icon from '../components/icon'
 
+import background from '../assets/desktop.png'
+
 interface Repository {
   id: number
   description: string
@@ -32,7 +34,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ repositories }) => {
       <Head>
         <title>Portfólio | Boselli.dev</title>
       </Head>
-      <Header />
+      <Header backgroundImage={background} />
       <Container>
         <RepositoriesWrapper>
           {repositories.map(repository => (

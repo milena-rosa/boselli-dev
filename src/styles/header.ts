@@ -1,24 +1,34 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-export const Wrapper = styled.div`
-  align-items: center;
+interface HeaderProps {
+  backgroundImage: string
+}
+
+export const Wrapper = styled.div<HeaderProps>`
+  align-items: flex-start;
+  background: url(${props => props.backgroundImage}) no-repeat;
+  background-size: cover;
   display: flex;
-  justify-content: center;
-  height: 160px;
+  justify-content: stretch;
+  height: 400px;
   width: 100vw;
+  z-index: 10000;
 `
 
 export const Container = styled.div`
+  background: rgba(0, 0, 0, 0.7);
   align-items: center;
+  align-self: flex-start;
   /* background: ${props => props.theme.colors.background}; */
   /* background: limegreen; */
   color: ${props => props.theme.colors.primary};
   display: flex;
   height: 80px;
-  justify-content: space-between;
-  position: relative;
-  width: 80%;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 
   img {
     height: 56px;

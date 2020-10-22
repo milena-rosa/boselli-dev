@@ -6,6 +6,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 50px;
+  margin-top: -270px;
+  z-index: 1;
 `
 
 export const RepositoriesWrapper = styled.div`
@@ -20,9 +22,11 @@ export const RepositoryCard = styled.div`
   color: ${props => props.theme.colors.secondary};
   display: flex;
   flex-direction: column;
+  opacity: 0.9;
   /* justify-content: space-between; */
   /* min-height: 240px; */
   padding: 24px;
+  z-index: 1;
 `
 
 export const CardHeader = styled.div`
